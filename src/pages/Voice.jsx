@@ -69,7 +69,7 @@ const Voice = () => {
         >
            <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-transparent"></div>
            <h3 className="font-headline-lg text-2xl uppercase tracking-widest relative z-10">Prefer a Direct Call?</h3>
-           <a href="tel:0800-NASHE" className="text-4xl md:text-5xl font-headline-xl font-black text-accent block hover:scale-105 transition-all relative z-10">0800-NASHE</a>
+           <a href="tel:+263785770586" className="text-4xl md:text-5xl font-headline-xl font-black text-accent block hover:scale-105 transition-all relative z-10">+263 78 577 0586</a>
            <p className="font-label-md text-primary-fixed-dim uppercase tracking-widest relative z-10 opacity-70">Always available for emergencies</p>
         </motion.div>
       </div>

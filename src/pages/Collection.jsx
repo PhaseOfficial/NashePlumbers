@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import emergencyImg from "../assets/plumber installing .jpeg";
+import leakImg from "../assets/intsallation on wall.jpeg";
+import geyserImg from "../assets/tank after setup.jpeg";
+import drainImg from "../assets/plumber setting up pipes.jpeg";
 
 const Services = () => {
   const fadeInUp = {
@@ -17,16 +21,18 @@ const Services = () => {
       tag: "24/7 PRIORITY",
       desc: "Rapid response for bursts, flooding, and critical failures. Arrival within 60 minutes across Harare.",
       features: ["Burst Pipe Repair", "Severe Flooding Control", "Overnight Site Visits"],
-      color: "bg-error/10 text-error border-error/20"
+      color: "bg-error/10 text-error border-error/20",
+      img: emergencyImg
     },
     {
       id: "leak",
-      icon: "leak_add",
+      icon: "water_damage",
       title: "Leak Detection",
       tag: "PRECISION",
       desc: "Non-invasive ultrasonic and thermal imaging to find hidden leaks before they cause major damage.",
       features: ["Thermal Imaging Scans", "Acoustic Water Sensing", "Slab Leak Identification"],
-      color: "bg-secondary/10 text-secondary border-secondary/20"
+      color: "bg-secondary/10 text-secondary border-secondary/20",
+      img: leakImg
     },
     {
       id: "geyser",
@@ -35,16 +41,18 @@ const Services = () => {
       tag: "INSTALLATION & REPAIR",
       desc: "Full service maintenance and installation for electric, gas, and solar heating systems.",
       features: ["Thermostat Replacement", "Safety Valve Maintenance", "Solar Conversions"],
-      color: "bg-primary/10 text-primary border-primary/20"
+      color: "bg-primary/10 text-primary border-primary/20",
+      img: geyserImg
     },
     {
       id: "drain",
-      icon: "cleaning_services",
+      icon: "sanitizer",
       title: "Drain Cleaning",
       tag: "MAINTENANCE",
       desc: "High-pressure hydro-jetting and mechanical cleaning for the most persistent sewer blockages.",
       features: ["Root Removal", "Grease Trap Cleaning", "CCTV Camera Inspection"],
-      color: "bg-accent/10 text-accent border-accent/20"
+      color: "bg-accent/10 text-accent border-accent/20",
+      img: drainImg
     }
   ];
 
@@ -114,11 +122,9 @@ const Services = () => {
                 </div>
               </div>
 
-              <div className="lg:col-span-7 bg-surface-container-low rounded-2xl h-[300px] md:h-[400px] relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-20 group-hover:scale-110 transition-transform duration-1000">
-                   <span className="material-symbols-outlined text-[200px] text-primary">{s.icon}</span>
-                </div>
+              <div className="lg:col-span-7 bg-surface-container-low rounded-2xl h-[300px] md:h-[400px] relative overflow-hidden group border border-outline-variant/30">
+                <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-transparent"></div>
                 <div className="absolute bottom-8 right-8">
                   <Link to="/contact" className="bg-primary text-white px-8 py-4 rounded-xl font-label-md hover:bg-accent transition-colors shadow-xl">
                     BOOK SERVICE
@@ -196,8 +202,8 @@ const Services = () => {
                <p className="font-body-lg opacity-90">Call our emergency hotline for rapid 60-minute response.</p>
             </div>
           </div>
-          <a href="tel:+263770000000" className="bg-primary text-white px-12 py-6 rounded-2xl font-headline-md text-2xl shadow-2xl hover:scale-105 transition-all">
-            0800-NASHE
+          <a href="tel:+263785770586" className="bg-primary text-white px-12 py-6 rounded-2xl font-headline-md text-2xl shadow-2xl hover:scale-105 transition-all">
+            +263 78 577 0586
           </a>
         </div>
       </section>

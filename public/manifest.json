@@ -1,6 +1,6 @@
 {
-  "short_name": "KotaItems",
-  "name": "Kota Items | Industrial Excellence",
+  "short_name": "NashePlumbers",
+  "name": "Nashe Plumbers | Reliable Plumbing Services Zimbabwe",
   "icons": [
     {
       "src": "weblogo.png",
@@ -10,6 +10,6 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#001e40",
+  "background_color": "#fbf9f8"
 }

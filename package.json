@@ -2,7 +2,7 @@
   "name": "landing-page",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://phaseofficial.github.io/Java-haus/#",
+  "homepage": "https://phaseofficial.github.io/NashePlumbers/#",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,11 +1,38 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    service: "Select a Service",
+    message: ""
+  });
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
     transition: { duration: 0.6 }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const phoneNumber = "263785770586";
+    const text = `*New Service Request - Nashe Plumbers*%0A%0A` +
+                 `*Name:* ${formData.name}%0A` +
+                 `*Phone:* ${formData.phone}%0A` +
+                 `*Service:* ${formData.service}%0A` +
+                 `*Message:* ${formData.message}`;
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -55,7 +82,7 @@ const Contact = () => {
                 <div className="space-y-2">
                    <h3 className="font-headline-sm text-xl text-primary uppercase font-bold">Phone Support</h3>
                    <p className="font-body-md text-on-surface-variant leading-relaxed">Call our expert team directly for immediate assistance.</p>
-                   <a href="tel:+263770000000" className="text-2xl font-headline-md text-primary font-bold hover:text-accent transition-colors">+263 770 000 000</a>
+                   <a href="tel:+263785770586" className="text-2xl font-headline-md text-primary font-bold hover:text-accent transition-colors">+263 78 577 0586</a>
                 </div>
               </motion.div>
 
@@ -110,25 +137,46 @@ const Contact = () => {
             >
               <div className="space-y-4">
                 <h2 className="font-headline-xl text-primary text-4xl font-bold uppercase tracking-tighter">Send a Message</h2>
-                <p className="font-body-lg text-on-surface-variant">Fill out the form below and our team will get back to you within 4 business hours.</p>
+                <p className="font-body-lg text-on-surface-variant">Fill out the form below and it will open WhatsApp with your details.</p>
               </div>
 
-              <form className="space-y-8">
+              <form className="space-y-8" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-3">
                     <label className="font-label-md text-on-surface text-sm uppercase tracking-widest px-1">Full Name</label>
-                    <input type="text" className="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" placeholder="John Doe" />
+                    <input 
+                      type="text" 
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" 
+                      placeholder="John Doe" 
+                    />
                   </div>
                   <div className="space-y-3">
                     <label className="font-label-md text-on-surface text-sm uppercase tracking-widest px-1">Phone Number</label>
-                    <input type="tel" className="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" placeholder="+263 ..." />
+                    <input 
+                      type="tel" 
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" 
+                      placeholder="+263 ..." 
+                    />
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <label className="font-label-md text-on-surface text-sm uppercase tracking-widest px-1">Service Type</label>
-                  <select className="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all appearance-none cursor-pointer">
-                    <option>Select a Service</option>
+                  <select 
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all appearance-none cursor-pointer"
+                  >
+                    <option disabled>Select a Service</option>
                     <option>Emergency Repair</option>
                     <option>Geyser Installation</option>
                     <option>Leak Detection</option>
@@ -139,11 +187,20 @@ const Contact = () => {
 
                 <div className="space-y-3">
                   <label className="font-label-md text-on-surface text-sm uppercase tracking-widest px-1">Your Message</label>
-                  <textarea rows="5" className="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" placeholder="Describe your plumbing needs..."></textarea>
+                  <textarea 
+                    name="message"
+                    rows="5" 
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all" 
+                    placeholder="Describe your plumbing needs..."
+                  ></textarea>
                 </div>
 
-                <button className="w-full bg-primary text-white py-6 rounded-2xl font-headline-md text-xl uppercase tracking-widest hover:bg-accent transition-all shadow-xl shadow-primary/20">
-                  Submit Request
+                <button type="submit" className="w-full bg-primary text-white py-6 rounded-2xl font-headline-md text-xl uppercase tracking-widest hover:bg-accent transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3">
+                  <i className="ri-whatsapp-line text-2xl"></i>
+                  SEND VIA WHATSAPP
                 </button>
               </form>
             </motion.div>
@@ -153,7 +210,7 @@ const Contact = () => {
                   <h3 className="font-headline-sm text-2xl text-primary uppercase font-bold">Need an instant response?</h3>
                   <p className="font-body-md text-on-surface-variant">Our technicians are standing by to answer your questions via WhatsApp.</p>
                </div>
-               <a href="https://wa.me/263770000000" className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-headline-sm text-lg hover:scale-105 transition-all flex items-center gap-3 shadow-xl shadow-green-500/20">
+               <a href="https://wa.me/263785770586" className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-headline-sm text-lg hover:scale-105 transition-all flex items-center gap-3 shadow-xl shadow-green-500/20">
                   <i className="ri-whatsapp-line text-2xl"></i>
                   CHAT DIRECTLY
                </a>

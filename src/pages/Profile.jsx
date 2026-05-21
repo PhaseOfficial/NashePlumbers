@@ -61,9 +61,9 @@ const Profile = () => {
            <h2 className="font-headline-sm text-xl text-primary uppercase border-b border-outline-variant/30 pb-6">Recent Service History</h2>
            <div className="space-y-6">
               {[
-                { date: "Oct 12, 2024", service: "Geyser Maintenance", status: "Completed", cost: "$45" },
-                { date: "Aug 05, 2024", service: "Drain Cleaning", status: "Completed", cost: "$60" },
-                { date: "May 22, 2024", service: "Leak Detection", status: "Completed", cost: "$85" }
+                { date: "Oct 12, 2026", service: "Geyser Maintenance", status: "Completed", cost: "$45" },
+                { date: "Aug 05, 2026", service: "Drain Cleaning", status: "Completed", cost: "$60" },
+                { date: "May 22, 2026", service: "Leak Detection", status: "Completed", cost: "$85" }
               ].map((job, i) => (
                 <div key={i} className="flex justify-between items-center p-6 bg-surface rounded-2xl border border-outline-variant/10 hover:border-accent transition-colors group cursor-pointer">
                    <div className="space-y-1">
