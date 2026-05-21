@@ -1,0 +1,15 @@
+{
+  "short_name": "KotaItems",
+  "name": "Kota Items | Industrial Excellence",
+  "icons": [
+    {
+      "src": "weblogo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
