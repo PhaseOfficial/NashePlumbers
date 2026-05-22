@@ -25,6 +25,36 @@ const Services = () => {
       img: emergencyImg
     },
     {
+      id: "drain-laying",
+      icon: "layers",
+      title: "Drain Laying",
+      tag: "INFRASTRUCTURE",
+      desc: "Certified underground drainage solutions including design, excavation, and professional pipe laying for new builds and renovations.",
+      features: ["Sewer Line Install", "Stormwater Systems", "Septic Tank Layout"],
+      color: "bg-primary/10 text-primary border-primary/20",
+      img: drainImg
+    },
+    {
+      id: "reticulation",
+      icon: "hub",
+      title: "Water Reticulation",
+      tag: "DISTRIBUTION",
+      desc: "Engineering complex water distribution networks for residential estates, industrial parks, and commercial skyscrapers.",
+      features: ["Main Line Setup", "Pressure Regulation", "Complex Valving Systems"],
+      color: "bg-secondary/10 text-secondary border-secondary/20",
+      img: leakImg
+    },
+    {
+      id: "maintenance",
+      icon: "handyman",
+      title: "General Maintenance",
+      tag: "PREVENTATIVE",
+      desc: "Comprehensive plumbing health checks and preventative maintenance contracts to keep your infrastructure performing at its best.",
+      features: ["System Audits", "Valve Servicing", "Corrosion Protection"],
+      color: "bg-accent/10 text-accent border-accent/20",
+      img: geyserImg
+    },
+    {
       id: "leak",
       icon: "water_damage",
       title: "Leak Detection",
@@ -43,16 +73,6 @@ const Services = () => {
       features: ["Thermostat Replacement", "Safety Valve Maintenance", "Solar Conversions"],
       color: "bg-primary/10 text-primary border-primary/20",
       img: geyserImg
-    },
-    {
-      id: "drain",
-      icon: "sanitizer",
-      title: "Drain Cleaning",
-      tag: "MAINTENANCE",
-      desc: "High-pressure hydro-jetting and mechanical cleaning for the most persistent sewer blockages.",
-      features: ["Root Removal", "Grease Trap Cleaning", "CCTV Camera Inspection"],
-      color: "bg-accent/10 text-accent border-accent/20",
-      img: drainImg
     }
   ];
 

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -10,14 +11,37 @@ const Footer = () => {
             Professional grade plumbing solutions since 2014. Certified specialists in residential and commercial plumbing across Zimbabwe.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
-              <i className="ri-facebook-fill"></i>
+            <a 
+              href="https://www.facebook.com/profile.php?id=61573821494420" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"
+            >
+              <FaFacebookF size={18} />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
-              <i className="ri-instagram-line"></i>
+            <a 
+              href="https://www.instagram.com/p/DYm7RiZijrM/?igsh=M2N2MDg4ZGRmdDM0" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"
+            >
+              <FaInstagram size={18} />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
-              <i className="ri-whatsapp-line"></i>
+            <a 
+              href="https://vm.tiktok.com/ZS9Yf7nxgVQEh-7zNW6/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"
+            >
+              <FaTiktok size={18} />
+            </a>
+            <a 
+              href="https://wa.me/263785770586" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"
+            >
+              <FaWhatsapp size={18} />
             </a>
           </div>
         </div>
@@ -51,9 +75,14 @@ const Footer = () => {
       </div>
       
       <div className="max-w-container-max mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="font-body-sm text-primary-fixed-dim text-sm">
-          © 2026 Nashe Plumbers. Certified Specialist | Insured Service.
-        </p>
+        <div className="space-y-1 text-center md:text-left">
+          <p className="font-body-sm text-primary-fixed-dim text-sm">
+            © 2026 Nashe Plumbers. Certified Specialist | Insured Service.
+          </p>
+          <p className="font-body-sm text-[10px] text-primary-fixed-dim/60 uppercase tracking-widest">
+            made by <a href="https://www.redcupseries.co.zw" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline decoration-accent/30 underline-offset-4 transition-all">Red cup series</a>
+          </p>
+        </div>
         <div className="flex gap-8 font-body-sm text-xs text-primary-fixed-dim uppercase tracking-widest">
           <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>

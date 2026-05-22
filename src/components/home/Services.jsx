@@ -6,7 +6,10 @@ const Services = () => {
     { icon: "water_damage", title: "Leak Repairs", desc: "Detection and repair of hidden pipe leaks using advanced thermal imaging." },
     { icon: "plumbing", title: "Pipe Install", desc: "Professional installation of copper and PVC piping for all building types." },
     { icon: "sanitizer", title: "Drain Cleaning", desc: "Advanced hydro-jetting and mechanical cleaning for persistent blockages." },
-    { icon: "water_heater", title: "Geyser Install", desc: "Expert setup and maintenance of solar, gas, and electric water heaters." }
+    { icon: "water_heater", title: "Geyser Install", desc: "Expert setup and maintenance of solar, gas, and electric water heaters." },
+    { icon: "layers", title: "Drain Laying", desc: "Precision underground drainage system design and professional installation." },
+    { icon: "hub", title: "Water Reticulation", desc: "Full-scale distribution network setup for residential and industrial complexes." },
+    { icon: "handyman", title: "Maintenance", desc: "Scheduled preventative care and rapid repair services for all plumbing systems." }
   ];
 
   return (
